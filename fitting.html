@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Твой гардероб онлайн</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+        
+    </head>
+    <body>
+    	<div class="header">
+    		<div class="customer-info">
+    			<ul>
+    				<li><a href="#">Login</a></li>
+    				<li><a href="#">Registration</a></li>
+    				<li><a href="#">My wardrobe</a></li>
+    				<li><a href="#">My looks</a></li>
+    			</ul>	
+    		</div>
+    		<a href="#" class="logo">wardrobe</a>
+    	</div>
+    	<div class="menu">
+    		<ul>
+    			<li><a href="">My look</a></li>
+    			<li><a href="">Accesssories</a></li>
+    			<li><a href="">Dressess</a></li>
+                <li><a href="">Pants</a></li>
+                <li><a href="">Coats</a></li>
+                <li><a href="">Look for evening</a></li>
+                 <li><a href="">Boots</a></li>
+    		</ul>
+    	</div>
+    	<div class="main-content">
+            <div class="main-look" ondrop="drop(event)" id="div1" ondragover="allowDrop(event)">
+               
+                 <a class="save">Complete! Save my look</a>
+            </div>
+            <div class="categories">
+                <div class="sort">
+                    <span>Category:</span>
+                    <lu>
+                        <li>All category</li>
+                        <li>Dresses</li>
+                        <li>Shoes</li>
+                        <li>Boots</li>
+                    </ul> 
+                </div>
+                <ul class="catgory-item">
+                    <li><img id="drag1" draggable="true" ondragstart="drag(event)"  src="images/item1.jpg" /></li>
+                    <li><img id="drag2" draggable="true" ondragstart="drag(event)" src="images/item2.jpg" /></li>
+                    <li><img id="drag3" draggable="true" ondragstart="drag(event)" src="images/item3.jpg" /></li>
+                    <li><img id="drag4" draggable="true" ondragstart="drag(event)" src="images/item4.jpg" /></li>
+                    <li><img id="drag5" draggable="true" ondragstart="drag(event)" draggable="true" ondragstart="drag(event)" src="images/item5.jpg" /></li>
+                    <li><img id="drag6" draggable="true" ondragstart="drag(event)" src="images/item6.jpg" /></li>
+                    <li><img id="drag7" draggable="true" ondragstart="drag(event)" src="images/item1.jpg" /></li>
+                    <li><img id="drag8" draggable="true" ondragstart="drag(event)" src="images/item5.jpg" /></li>
+                    <li><img id="drag9" draggable="true" ondragstart="drag(event)" src="images/item3.jpg" /></li>
+                    <li><img id="drag10" draggable="true" ondragstart="drag(event)" src="images/item4.jpg" /></li>
+                </ul>
+            </div>
+        </div>
+    	<div class="footer">
+    		<div>
+	    		<ul>
+	    			<li><span>Information</span></li>
+	    			<li><a href="">About us</a></li>
+	    			<li><a href="">Customer Service</a></li>
+	    			<li><a href="">Privacy Policy</a></li>
+	    			<li><a href="">Orders and Returns</a></li>
+	    			<li><a href="">Contact Us</a></li>
+	    		</ul>
+	    		<ul>
+	    			<li><span>My wardrobe</li>
+	    			<li><a href="">Dressess</span></a></li>
+	    			<li><a href="">Shoes</a></li>
+	    			<li><a href="">Coats</a></li>
+	    			<li><a href="">Boots</a></li>
+	    			<li><a href="">Shorts</a></li>
+	    		</ul>
+	    		<ul>
+	    			<li><span>My account</span></li>
+	    			<li><a href="">Login</a></li>
+	    			<li><a href="">Registration</a></li>
+	    			<li><a href="">My wardrobe</a></li>
+	    			<li><a href="">My looks</a></li>
+	    		</ul>
+	    	</div>
+            <div id="div1" ondrop="drop(event)"
+ondragover="allowDrop(event)"></div>
+
+<img id="drag1" src="img_logo.gif" draggable="true"
+ondragstart="drag(event)" width="336" height="69">
+    	</div>
+        <script>
+            function allowDrop(ev)
+            {
+            ev.preventDefault();
+            }
+
+            function drag(ev)
+            {
+            ev.dataTransfer.setData("Text",ev.target.id);
+            }
+
+            function drop(ev)
+            {
+            ev.preventDefault();
+            var data=ev.dataTransfer.getData("Text");
+            var image = document.getElementById(data)
+             var canvas = document.createElement('canvas');
+             var ctx = canvas.getContext("2d");
+             canvas.width = 400;
+             canvas.height = 500;
+             ctx.drawImage(image, 0, 0, 400, 500);
+            ev.target.appendChild(document.getElementById(data));
+            ev.target.appendChild(canvas)
+            }
+
+            </script>
+    </body>
+</html>
