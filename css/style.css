@@ -45,12 +45,17 @@ body{
 	border-bottom: 5px solid #242424;
 	margin-bottom: 30px;
 	background: #fff;
+	text-align: center;
 }
 .menu ul{
 	border: 1px solid #242424;
 	border-bottom: none;
-	width: 1000px;
+	width: 700px;
 	margin:0 auto;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
 }
 .menu li{
 	border-right: 1px solid #242424;
@@ -68,6 +73,36 @@ body{
     color: #242424;
     line-height: 60px;
     padding: 0 30px;
+}
+.search{
+	border: 1px solid #242424;
+	display: inline-block;
+	width: 300px;
+	vertical-align: top;
+	margin-left: -5px;
+	height: 60px;
+	border-bottom: none;
+}
+.search input{
+	display: inline-block;
+	height: 60px;
+}
+.search input[type="search"]{
+	background: #fff;
+	padding: 20px 10px;
+	height: 18px;
+	color: grey;
+	font-style: italic;
+	font-size: 13px;
+	width: 200px;
+	text-align: center;
+}
+.search input[type="button"]{
+	background: url("../images/btn-search.gif") left top no-repeat;
+	border-left:1px solid #000; 
+	text-indent: -100000px;
+	width: 60px;
+
 }
 .menu li:hover a{
 	color: #fff;
