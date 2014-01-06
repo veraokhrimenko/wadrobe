@@ -193,20 +193,23 @@ body{
 	margin: 14px;
 	vertical-align: top;
 	border:1px solid #fff;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+    -webkit-box-sizing: border-box; /* Safari */
 }
 .landing div{
 	position: absolute;
 	border: 5px solid #242424;
 	bottom: 20px;
 	left: 20px;
-	width: 260px;
+	width: 85%;
 	height: 120px;
 	text-align: center;
     
 }
 .landing img{
-	width: 300px;
-	height: 390px;
+	width: 100%;
+	height: 100%;
 }
 .landing a{
 	color: #242424;
@@ -236,7 +239,6 @@ body{
 	border: 2px dashed #242424;
 	margin:20px;
 	display: block;
-	height: 110px;
 	text-align: center;
 	line-height: 50px;
 	font-size: 30px;
@@ -254,7 +256,7 @@ body{
 	text-align: center;
 }
 .listing img{
-	width: 200px;
+	width: 100%;
 	max-height: 300px;
 	border:1px solid #E2E2E2;
 	padding:15px 7px;
@@ -352,6 +354,19 @@ body{
 	.main-info span{
 		font-size:12px;
 	}
+	
+	/* landing */
+	.main-content {
+		 width:100%;
+	}
+	
+	.landing li{
+		width:278px;
+		height:361px;
+	}
+	.listing li{
+		width:200px;
+	}
 }
 @media screen and (max-width: 640px){
 	.bg-main{
@@ -382,6 +397,10 @@ body{
 		font-size:15px;
 		padding:0 20px;
 	}
+	
+	.listing li{
+		width:170px;
+	}
 }
 @media screen and (max-width: 480px){
 	
@@ -391,6 +410,22 @@ body{
 	.footer span, .footer a{
 		font-size:13px;
 	}
+	/* landing */ 
+	.landing li{
+		width: 198px;
+		height:258px;
+	}
+	.landing a, .upload{
+		font-size:24px;
+	}
+	.upload{
+		padding:10px;
+		line-height:30px;
+	}
+	.listing li{
+		width:190px;
+	}
+	
 }
 @media screen and (max-width: 320px){
 	.main-info span.title{
@@ -410,6 +445,15 @@ body{
 	}
 	.footer a{
 		display:none;
+	}
+	
+	/* landing */ .landing li{
+		width:260px;
+		height:338px;
+	}
+	.listing li{
+		width:110px;
+		height:260px;
 	}
 }
 

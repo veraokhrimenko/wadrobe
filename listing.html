@@ -10,9 +10,8 @@
     <body>
     	<div class="header">
     		<div class="customer-info">
-    			<ul>
-    				<li><a href="#">Login</a></li>
-    				<li><a href="#">Registration</a></li>
+    			<ul class="wrapper">
+    				<li><a href="#">Login / Registration</a></li>
     				<li><a href="#">My wardrobe</a></li>
     				<li><a href="#">My looks</a></li>
     			</ul>	
@@ -20,15 +19,17 @@
     		<a href="#" class="logo">wardrobe</a>
     	</div>
     	<div class="menu">
-    		<ul>
-    			<li><a href="">My look</a></li>
-    			<li><a href="">Accesssories</a></li>
-    			<li><a href="">Dressess</a></li>
-                <li><a href="">Pants</a></li>
-                <li><a href="">Coats</a></li>
-                <li><a href="">Look for evening</a></li>
-                 <li><a href="">Boots</a></li>
-    		</ul>
+			<div class="wrapper">
+				<form class="search" name="search">
+					<input type="search" placeholder="type query for search" /> 
+					<input type="button" value="search" /> 
+				</form>
+				<ul>
+					<li><a href="">My  wardrobe</a></li>
+					<li><a href="">My looks</a></li>
+					<li><a href="">Create a look</a></li>
+				</ul>
+			</div>
     	</div>
     	<div class="main-content">
             <ul class="listing">
@@ -63,7 +64,7 @@
             </ul>
         </div>
     	<div class="footer">
-    		<div>
+    		<div class="wrapper">
 	    		<ul>
 	    			<li><span>Information</span></li>
 	    			<li><a href="">About us</a></li>
